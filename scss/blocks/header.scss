@@ -1,0 +1,227 @@
+.header {
+    position: relative;
+    z-index: 1;
+
+    &__top {
+        margin: auto;
+        padding-top: 41px;
+        margin-left: 100px;
+        width: 1169px;
+        height: 53px;
+        @extend %flex;
+        position: relative;
+        z-index: 9999;
+
+        .nav {
+            &__menu {
+                padding-left: 96px;
+                @extend %flex;
+                width: 620px;
+                gap: 41.6px;
+
+                li {
+                    white-space: nowrap;
+                    text-align: center;
+
+                    a {
+                        @include text-style($main-font, 600, 12px, 167%, 0.17em, $black-text-color);
+                        text-transform: uppercase;
+                        display: block;
+                        transition: 0.5s;
+
+                        &:hover {
+                            color: $pink-text-color;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+
+        .loupe {
+            padding-left: 220px;
+        }
+
+        button {
+            width: 108px;
+            height: 36px;
+            text-align: center;
+            background-color: $pink-text-color;
+            border-radius: 4px;
+            @include text-style($accent-font, 500, 12px, 167%, 0.17em, $main-color);
+            text-transform: uppercase;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+
+        @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            margin-left: 0;
+            width: 375px;
+            height: auto;
+
+            .nav__menu {
+                padding-left: 0;
+                flex-direction: column;
+                width: 375px;
+                gap: 20px;
+
+                li {
+                    text-align: center;
+                }
+            }
+
+            .loupe {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+
+            button {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        z-index: 2;
+
+        .content {
+            margin: auto;
+            width: 1358px;
+            height: 654px;
+            margin-top: 41px;
+            margin-left: 100px;
+            @extend %flex;
+
+            .inscriptions {
+                width: 453px;
+
+                h1 {
+                    @include text-style($main-font, 900, 63px, 108%, none, $black-text-color);
+                }
+
+                p {
+                    @include text-style($main-font, 500, 16px, 137%, none, $grey_text-color);
+                    padding-top: 23px;
+                }
+
+                .buttons {
+                    @extend %flex;
+                    width: 365px;
+                    padding-top: 38px;
+
+                    .button-1 {
+                        width: 157px;
+                        height: 46px;
+                        text-align: center;
+                        background-color: $pink-text-color;
+                        border-radius: 4px;
+                        @include text-style($accent-font, 600, 12px, 167%, 0.17em, $main-color);
+                        text-transform: uppercase;
+                        transition: 1.5s;
+
+                        &:hover {
+                            transform: rotate(360deg);
+                        }
+                    }
+
+                    .button-2 {
+                        width: 188px;
+                        height: 46px;
+                        text-align: center;
+                        border: 1px solid $pink-text-color;
+                        background-color: $main-color;
+                        border-radius: 4px;
+                        @include text-style($accent-font, 600, 12px, 167%, 0.17em, $pink-text-color);
+                        text-transform: uppercase;
+                        transition: 0.1s;
+
+                        &:hover {
+                            transform: translateY(100px);
+                        }
+                    }
+                }
+
+                .icons {
+                    @extend %flex;
+                    gap: 17px;
+                    width: 265px;
+                    padding-top: 185px;
+
+                    span {
+                        @include text-style($accent-font, 600, 17px, 129%, 0.06em, $black-text-color);
+                    }
+
+                    .line {
+                        border-right: 1px solid #cccccc;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .big-image {
+                position: absolute;
+                right: 0px;
+                bottom: 30px;
+                z-index: -1;
+                background-color: transparent;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .content {
+                flex-direction: column;
+                width: 375px;
+                margin-left: 0;
+                height: auto;
+
+                .inscriptions {
+                    width: 375px;
+                    text-align: center;
+
+                    h1 {
+                        font-size: 36px;
+                    }
+
+                    .buttons {
+                        flex-direction: column;
+                        align-items: center;
+                        width: 375px;
+                        gap: 20px;
+                    }
+
+                    .icons {            
+                      margin: auto;
+                      margin-bottom: 100px;
+                    }
+                }
+
+                .big-image {
+                    position: relative;
+                    width: 375px;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    width: 1440px;
+    height: 720px;
+    margin: auto;
+    background-color: $main-color;
+
+    @media (max-width: 375px) {
+        width: 375px;
+        height: auto;
+        overflow: hidden;
+    }
+}

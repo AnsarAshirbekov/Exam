@@ -1,0 +1,60 @@
+.services{
+    &__title{
+        @include text-style($main-font, 700, 36px, 119%, none, $main-text-color);
+        text-align: center;
+        padding-top: 106px;
+    }
+    &__subtitle{
+        @include text-style($main-font, 500, 16px, 137%, none, #999999);
+        text-align: center;
+        padding-top: 20px;
+    }
+    &__blocks{
+        @extend %flex;
+        padding-top: 64px;
+        width: 1166px;
+        margin: auto;
+        @media (max-width:375px) {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .block-ser{
+            img{
+                animation-name: block;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes block{
+                from{
+                    padding-top: 0px;
+                }
+                to{
+                    padding-top: 80px;
+                }            
+            }
+            img:hover{
+                animation-play-state: paused;
+            }
+            .subblock{
+                @extend %flex;
+                padding-top: 22px;
+                p{
+                    @include text-style($main-font, 600, 21px, 167%, 0.05em, #363940);
+                }
+            }
+        }
+    }
+}
+.container-4{
+    width: 1440px;
+    height: 842px;
+    margin: auto;
+    background-color: $accent-color;
+    @media (max-width:375px) {
+        max-width: 375px;
+        height: 3000px;
+        }
+}

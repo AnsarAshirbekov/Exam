@@ -1,0 +1,44 @@
+.ipdc{
+    &__block{
+        display: flex;
+        flex-direction: column;
+        padding-top: 140px;
+        padding-left: 110px;
+        .read-more{
+            @extend %flex;
+            width: 137px;
+            padding-top: 44px;
+            p{
+                @include text-style($main-font, 500, 19px, 137%, none, $pink-text-color);
+            }
+        }        
+    }
+    &__title{
+        @include text-style($main-font, 700, 32px, 119%, none, $main-text-color);
+    }
+    &__text{
+        @include text-style($main-font, 500, 16px, 181%, none, $grey_text-color);
+        padding-top: 10px;
+    }
+}
+.container-3{
+    width: 1440px;
+    height: 610px;
+    margin: auto;
+    display: flex;
+    background-color: $main-color;
+    @media (max-width:375px) {
+        max-width: 375px;
+        height: 1200px;
+        flex-direction: column;
+        align-items: center;
+        .ipdc-image{
+            width: 100%;
+        }
+        .ipdc__block{
+            margin: auto;
+            padding-top: 0;
+            padding-left: 10px;
+            }
+        }
+}

@@ -1,0 +1,100 @@
+.footer {
+    &__blocks {
+        @extend %flex;
+        width: 1011px;
+        height: 192px;
+        padding-top: 120px;
+        padding-left: 135px;
+        gap: 100px;
+        .foot-block {
+            width: 180px;
+            height: 192px;
+            .foot-title-1 {
+                @include text-style($main-font, 600, 18px, 122%, none, $black-text-color);
+                white-space: nowrap;
+            }
+            .foot-title {
+                @include text-style($main-font, 600, 18px, 122%, none, #363940);
+                white-space: nowrap;
+            }
+            .big-text {
+                @include text-style($main-font, 500, 14px, 157%, none, $grey_text-color);
+                margin-top: 20px;
+                white-space: nowrap;
+            }
+            .small-text {
+                @include text-style($main-font, 500, 14px, 157%, none, $grey_text-color);
+                margin-top: 10px;
+                white-space: nowrap;
+            }
+            .foot-icons {
+                margin-top: 35px;
+                @extend %flex;
+                width: 144px;
+            }
+        }
+        .foot-block-1 {
+            width: 140px;
+            height: 192px;
+            .foot-title {
+                @include text-style($main-font, 600, 18px, 122%, none, #363940);
+                white-space: nowrap;
+            }
+            .big-text {
+                @include text-style($main-font, 500, 14px, 157%, none, $grey_text-color);
+                margin-top: 20px;
+                white-space: nowrap;
+            }
+            .small-text {
+                @include text-style($main-font, 500, 14px, 157%, none, $grey_text-color);
+                margin-top: 10px;
+                white-space: nowrap;
+            }
+            @media (max-width:375px) { 
+                margin-right: 45px;
+
+            }           
+        }
+        @media (max-width:375px) {  
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: nowrap;
+        }   
+    }
+}
+
+
+.container-7 {
+    width: 1440px;
+    height: 331px;
+    margin: auto;
+    background-color: $main-color;
+    display: flex;
+    @media (max-width:375px) {
+        max-width: 375px;
+        height: 1200px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: nowrap;
+        padding-right: 150px;
+        } 
+}
+
+.call {
+    width: 85px;
+    height: 24px;
+    @extend %flex;
+    gap: 11px;
+    padding-left: 175px;
+    padding-top: 75px;
+    span{
+        @include text-style($main-font, 600, 17px, 129%, 0.06em, $black-text-color);
+    }
+    @media (max-width:375px) {
+        margin-top: 800px;
+        margin-right: 225px;
+    }
+}

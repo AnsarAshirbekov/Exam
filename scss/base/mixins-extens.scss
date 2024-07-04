@@ -1,0 +1,20 @@
+@mixin text-style($ff, $fw, $fz, $ln, $ls, $color){
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $ln;
+    letter-spacing: $ls;
+    color: $color;
+}
+%flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+%block_cus{
+    width: 259px;
+    height: 231px;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+}
