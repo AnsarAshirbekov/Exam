@@ -1,0 +1,17 @@
+.ipdc {
+  margin: auto;
+}
+.ipdc__block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 140px;
+  padding-left: 110px;
+}
+
+.container-3 {
+  max-width: 1440px;
+  min-width: 1439px;
+  height: 610px;
+  margin: auto;
+  display: flex;
+}/*# sourceMappingURL=ipdc.css.map */
